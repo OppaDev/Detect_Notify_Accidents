@@ -1,11 +1,13 @@
 # app/services/yolo_service.py
-
 from ultralytics import YOLO
+import os
+import logging
 
 class YoloService:
     def __init__(self):
         self.model = None
         self.initialized = False
+        self.logger = logging.getLogger(__name__)
 
     async def initialize(self, model_path: str = "yolov8n.pt"):
         """
@@ -13,9 +15,16 @@ class YoloService:
         """
         if not self.initialized:
             try:
+                # Verificar si el archivo existe
+                if not os.path.exists(model_path):
+                    raise FileNotFoundError(f"Modelo no encontrado en: {model_path}")
+                
+                self.logger.info(f"Cargando modelo desde: {model_path}")
                 self.model = YOLO(model_path)
                 self.initialized = True
+                self.logger.info("Modelo YOLO inicializado correctamente")
             except Exception as e:
+                self.logger.error(f"Error al inicializar YOLO: {str(e)}")
                 raise Exception(f"Error al inicializar YOLO: {str(e)}")
 
     async def detect(self, frame):
@@ -27,21 +36,7 @@ class YoloService:
         
         try:
             results = self.model(frame, verbose=False)
-            return results[0]  # Retorna el primer resultado
+            return results[0]
         except Exception as e:
-            raise Exception(f"Error en la detección: {str(e)}")
-
-    def get_boxes(self, result):
-        """
-        Obtiene las cajas delimitadoras del resultado
-        """
-        boxes = []
-        for box in result.boxes:
-            b = box.xyxy[0].tolist()  # get box coordinates in (top, left, bottom, right) format
-            c = box.cls
-            boxes.append({
-                'bbox': b,
-                'class': int(c),
-                'conf': float(box.conf)
-            })
-        return boxes
+            self.logger.error(f"Error en la detección: {str(e)}")
+            raise

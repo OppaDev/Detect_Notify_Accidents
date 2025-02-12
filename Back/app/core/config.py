@@ -11,9 +11,16 @@ class Settings(BaseSettings):
     CAMERA_URL: str = "http://192.168.100.169:4747/video"
     
     # Configuración del modelo YOLO
-    MODEL_PATH: str = os.path.join(os.path.dirname(os.path.dirname(__file__)), "best.pt")  # Ruta a tu modelo entrenado
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    MODEL_PATH: str = os.path.join(BASE_DIR, "best.pt")
     
     class Config:
         env_file = ".env"
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        print(f"Ruta del modelo configurada: {self.MODEL_PATH}")
+        if not os.path.exists(self.MODEL_PATH):
+            print(f"ADVERTENCIA: El archivo del modelo no existe en: {self.MODEL_PATH}")
 
 settings = Settings()
