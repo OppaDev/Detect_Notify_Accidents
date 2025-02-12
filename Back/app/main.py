@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from app.core import settings
 from app.services.firebase_service import FirebaseService
-from app.api.endpoints import stream_router
+from app.api.endpoints import stream_router, notifications
 from app.core.logging_config import setup_logging
+from app.services.notification_listener import NotificationListener
 import logging
 from datetime import datetime
 
@@ -31,6 +32,16 @@ async def startup_event():
     except Exception as e:
         logger.error(f"Error al inicializar Firebase: {str(e)}")
         raise
+    
+    # Iniciar listener de notificaciones
+    try:
+        notification_listener = NotificationListener()
+        notification_listener.start_listening()
+        logger.info("Servicio de notificaciones iniciado")
+    except Exception as e:
+        logger.error(f"Error al iniciar servicio de notificaciones: {str(e)}")
+        raise
+    
 
 @app.get("/")
 async def root():
@@ -58,5 +69,7 @@ async def test_firebase():
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
-app.include_router(stream_router, prefix=settings.API_V1_STR)
+app.include_router(stream_router, 
+                prefix=settings.API_V1_STR,
+                tags=["notifications"])
 
