@@ -22,5 +22,22 @@ class Settings(BaseSettings):
         print(f"Ruta del modelo configurada: {self.MODEL_PATH}")
         if not os.path.exists(self.MODEL_PATH):
             print(f"ADVERTENCIA: El archivo del modelo no existe en: {self.MODEL_PATH}")
+    
+    def validate_paths(self):
+        """Validar rutas y configuraciones críticas"""
+        if not os.path.exists(self.MODEL_PATH):
+            raise FileNotFoundError(
+                f"ERROR CRÍTICO: Modelo no encontrado en {self.MODEL_PATH}"
+            )
+        
+        return True
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        print(f"Ruta del modelo configurada: {self.MODEL_PATH}")
+        try:
+            self.validate_paths()
+        except Exception as e:
+            print(f"Error en la validación de configuración: {str(e)}")
 
 settings = Settings()

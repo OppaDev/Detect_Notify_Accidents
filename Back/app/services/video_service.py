@@ -3,17 +3,20 @@ import cv2
 import numpy as np
 from typing import Optional
 import asyncio
+import logging
 
 class VideoService:
     def __init__(self):
         self.connections = set()
         self.cap = None
         self.is_running = False
+        self.logger = logging.getLogger(__name__)
 
     async def initialize_camera(self, camera_url: str) -> bool:
         """
         Inicializa la conexión con la cámara
         """
+        self.logger.info(f"Intentando inicializar cámara: {camera_url}")
         try:
             self.cap = cv2.VideoCapture(camera_url)
             if not self.cap.isOpened():
