@@ -63,7 +63,11 @@ class VideoService:
         """
         Desconecta un cliente WebSocket
         """
-        self.connections.remove(websocket)
+        try:
+            self.connections.remove(websocket)
+        except KeyError:
+            pass  # Si ya fue removido, ignorar
+    
         if len(self.connections) == 0:
             self.release_camera()
 
