@@ -1,5 +1,4 @@
 # Back/.gitignore
-app/__pycache__
 index.html
 probando.ipynb
 .env
