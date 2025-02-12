@@ -1,0 +1,7 @@
+path: C:/Users/OppaDev/Desktop\DataSets/AppFallDetectV1/TrainModel
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 2
+names: ['Caida', 'Persona']

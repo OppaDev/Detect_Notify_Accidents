@@ -1,0 +1,10 @@
+fastapi>=0.104.1
+uvicorn>=0.34.0
+python-multipart>=0.0.20
+opencv-python-headless>=4.8.0
+ultralytics>=8.0.0
+firebase-admin>=6.2.0
+websockets>=14.2
+python-dotenv>=1.0.1
+pydantic>=2.10.6
+starlette>=0.45.3
