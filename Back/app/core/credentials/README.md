@@ -1,19 +1,18 @@
 # Firebase Credentials
 
-En esta carpeta debe ir el archivo JSON de las credenciales de Firebase. Este archivo es necesario para que la aplicación pueda comunicarse con los servicios de Firebase.
+En esta carpeta debe ir el archivo de credenciales de Firebase (`firebase-credenciales.json`). Este archivo es necesario para la autenticación del servidor con Firebase.
 
-## Cómo obtener el archivo JSON de Firebase
+## Cómo obtener el archivo de credenciales
 
-1. Ve a la [Consola de Firebase](https://console.firebase.google.com/).
-2. Selecciona tu proyecto.
-3. En el panel de navegación, haz clic en el ícono de engranaje junto a "Project Overview" y selecciona "Project settings".
-4. En la pestaña "General", desplázate hacia abajo hasta la sección "Your apps".
-5. Si aún no has agregado tu aplicación, haz clic en "Add app" y sigue las instrucciones para registrarla.
-6. Una vez registrada la aplicación, haz clic en "Download google-services.json" para descargar el archivo JSON de configuración.
+1. Ve a la [Consola de Firebase](https://console.firebase.google.com/)
+2. Selecciona tu proyecto "fallapp-6d506"
+3. Ve a Configuración del proyecto (ícono de engranaje)
+4. Selecciona la pestaña "Cuentas de servicio"
+5. En "SDK Admin de Firebase", haz clic en "Generar nueva clave privada"
+6. Guarda el archivo JSON descargado como `firebase-credenciales.json`
+7. Coloca el archivo en esta carpeta
 
-Coloca el archivo `google-services.json` en esta carpeta (`/c:/Users/OppaDev/Desktop/DataSets/AppFallDetectV1/Back/app/core/credentials/`).
-
-Asegúrate de no compartir este archivo públicamente, ya que contiene información sensible de tu proyecto de Firebase.
-## Nota Importante
-
-Este archivo no se incluye en el repositorio por razones de seguridad. Cada desarrollador debe obtener su propio archivo `google-services.json` siguiendo las instrucciones anteriores.
+## Importante
+- NO compartas ni subas este archivo al repositorio
+- Mantén este archivo seguro, contiene claves privadas
+- Cada desarrollador debe generar sus propias credenciales

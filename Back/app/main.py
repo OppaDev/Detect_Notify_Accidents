@@ -4,6 +4,7 @@ from app.services.firebase_service import FirebaseService
 from app.api.endpoints import stream_router
 from app.core.logging_config import setup_logging
 import logging
+from datetime import datetime
 
 # Configurar logging al inicio
 setup_logging()
@@ -38,6 +39,24 @@ async def root():
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
+
+@app.get("/test-firebase")
+async def test_firebase():
+    try:
+        firebase_service = FirebaseService()
+        firebase_service.initialize(
+            cred_path=settings.FIREBASE_CRED_PATH,
+            database_url=settings.FIREBASE_DATABASE_URL
+        )
+        test_data = {
+            'test': True,
+            'timestamp': datetime.now().isoformat(),
+            'message': 'Prueba de conexión'
+        }
+        await firebase_service.save_detection(test_data)
+        return {"status": "success", "message": "Datos guardados en Firebase"}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
 
 app.include_router(stream_router, prefix=settings.API_V1_STR)
 
