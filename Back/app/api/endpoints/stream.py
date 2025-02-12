@@ -6,54 +6,77 @@ from app.core.config import settings
 import cv2
 import numpy as np
 import asyncio
+import logging
 
 router = APIRouter()
 video_service = VideoService()
 yolo_service = YoloService()
+logger = logging.getLogger(__name__)
 
 async def try_reconnect_camera(video_service, max_attempts=3):
     """Intenta reconectar la cámara"""
     for attempt in range(max_attempts):
+        logger.info(f"Intento de reconexión {attempt + 1}/{max_attempts}")
         if await video_service.initialize_camera(settings.CAMERA_URL):
+            logger.info("Reconexión exitosa")
             return True
-        print(f"Intento de reconexión {attempt + 1}/{max_attempts}")
         await asyncio.sleep(1)
+    logger.error("Todos los intentos de reconexión fallaron")
     return False
 
 @router.websocket("/ws/stream")
 async def websocket_endpoint(websocket: WebSocket):
     try:
+        # Conectar WebSocket
         await video_service.connect(websocket)
-        
-        print(f"Buscando modelo en: {settings.MODEL_PATH}")
+        logger.info(f"Buscando modelo en: {settings.MODEL_PATH}")
         
         # Inicializar YOLO
         try:
             await yolo_service.initialize(settings.MODEL_PATH)
+            logger.info("YOLO inicializado correctamente")
         except Exception as e:
-            print(f"Error al inicializar YOLO: {str(e)}")
+            logger.error(f"Error al inicializar YOLO: {str(e)}")
             await websocket.close(code=1001, reason="Error al inicializar YOLO")
             return
-        # Inicializar la cámara con reintentos
+
+        # Inicializar la cámara
+        logger.info("Intentando inicializar la cámara...")
         if not await try_reconnect_camera(video_service):
+            logger.error("No se pudo inicializar la cámara")
             await websocket.close(code=1001, reason="No se pudo inicializar la cámara")
             return
         
+        logger.info("Iniciando streaming de video")
+        frame_count = 0
+        
         while True:
+            if websocket.client_state.DISCONNECTED:
+                logger.info("Cliente desconectado, terminando streaming")
+                break
+
             if not video_service.is_running:
+                logger.warning("Cámara no está corriendo, intentando reconectar")
                 if not await try_reconnect_camera(video_service):
+                    logger.error("Fallo en la reconexión de la cámara")
                     break
                 
             try:
                 frame_buffer = await video_service.get_frame()
                 if frame_buffer is None:
+                    logger.warning("Frame vacío recibido")
                     continue
 
                 # Convertir el buffer a frame
                 frame_array = np.frombuffer(frame_buffer, dtype=np.uint8)
                 frame = cv2.imdecode(frame_array, cv2.IMREAD_COLOR)
 
+                if frame is None:
+                    logger.warning("Error al decodificar el frame")
+                    continue
+
                 try:
+                    # Realizar detección YOLO
                     results = await yolo_service.detect(frame)
                     boxes = yolo_service.get_boxes(results)
 
@@ -61,42 +84,49 @@ async def websocket_endpoint(websocket: WebSocket):
                     for box in boxes:
                         bbox = box['bbox']
                         conf = box['conf']
+                        cls = box['class']
                         
                         # Convertir coordenadas float a int
                         x1, y1, x2, y2 = map(int, bbox)
                         
                         # Dibujar rectángulo y confianza
                         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-                        cv2.putText(frame, f"{conf:.2f}", (x1, y1-10),
+                        cv2.putText(frame, f"C{cls}:{conf:.2f}", (x1, y1-10),
                                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
                     # Convertir frame procesado a JPEG
                     _, processed_buffer = cv2.imencode('.jpg', frame)
                     
-                    # Verificar si la conexión sigue activa antes de enviar
-                    if websocket.client_state.CONNECTED:
+                    if not websocket.client_state.DISCONNECTED:
                         await websocket.send_bytes(processed_buffer.tobytes())
+                        frame_count += 1
+                        if frame_count % 100 == 0:  # Log cada 100 frames
+                            logger.debug(f"Frames procesados: {frame_count}")
                     else:
                         break
 
                 except Exception as e:
-                    print(f"Error en el procesamiento YOLO: {str(e)}")
-                    # Verificar si la conexión sigue activa antes de enviar
-                    if websocket.client_state.CONNECTED:
+                    logger.error(f"Error en el procesamiento YOLO: {str(e)}")
+                    if not websocket.client_state.DISCONNECTED:
                         await websocket.send_bytes(frame_buffer.tobytes())
                     else:
                         break
 
+            except WebSocketDisconnect:
+                logger.info("Cliente desconectado durante el streaming")
+                break
             except Exception as e:
-                print(f"Error en el proceso de streaming: {str(e)}")
-                await asyncio.sleep(0.1)  # Pequeña pausa antes de reintentar
-                continue
+                logger.error(f"Error en el proceso de streaming: {str(e)}")
+                if not websocket.client_state.DISCONNECTED:
+                    await asyncio.sleep(0.1)
+                else:
+                    break
 
     except WebSocketDisconnect:
-        print("Cliente desconectado normalmente")
+        logger.info("Cliente desconectado normalmente")
     except Exception as e:
-        print(f"Error en websocket: {str(e)}")
+        logger.error(f"Error general en websocket: {str(e)}")
     finally:
         # Asegurarse de limpiar recursos
         video_service.disconnect(websocket)
-        print("Conexión cerrada y recursos liberados")
+        logger.info(f"Conexión cerrada y recursos liberados. Total frames procesados: {frame_count}")
