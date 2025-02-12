@@ -1,25 +1,32 @@
 # app/services/video_service.py
-import cv2
-from fastapi import WebSocket
 
 class VideoService:
     def __init__(self):
-        self.camera = None
-    
-    async def initialize_camera(self, camera_url: str):
+        self.connections = set()
+
+    async def connect(self, websocket):
+        """
+        Conecta un nuevo cliente WebSocket
+        """
+        self.connections.add(websocket)
         try:
-            self.camera = cv2.VideoCapture(camera_url)
-            return self.camera.isOpened()
+            await websocket.accept()
         except Exception as e:
-            print(f"Error initializing camera: {e}")
-            return False
-    
-    async def get_frame(self):
-        if self.camera is None:
-            return None
-        
-        success, frame = self.camera.read()
-        if not success:
-            return None
-        
-        return frame
+            self.connections.remove(websocket)
+            raise e
+
+    def disconnect(self, websocket):
+        """
+        Desconecta un cliente WebSocket
+        """
+        self.connections.remove(websocket)
+
+    async def broadcast(self, message):
+        """
+        Envía un mensaje a todos los clientes conectados
+        """
+        for connection in self.connections:
+            try:
+                await connection.send_json(message)
+            except:
+                self.connections.remove(connection)

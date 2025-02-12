@@ -7,4 +7,5 @@ firebase-admin>=6.2.0
 websockets>=14.2
 python-dotenv>=1.0.1
 pydantic>=2.10.6
+pydantic-settings>=2.1.0  # Añade esta línea
 starlette>=0.45.3

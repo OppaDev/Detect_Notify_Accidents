@@ -1,7 +1,6 @@
-# app/main.py
 from fastapi import FastAPI
-from app.core.config import settings
-from app.api.endpoints import stream
+from app.core import settings
+from app.api.endpoints import stream_router
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -16,4 +15,4 @@ async def root():
 async def health_check():
     return {"status": "healthy"}
 
-app.include_router(stream.router, prefix=settings.API_V1_STR)
+app.include_router(stream_router, prefix=settings.API_V1_STR)
