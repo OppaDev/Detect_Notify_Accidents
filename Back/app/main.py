@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.core import settings
+from app.services.firebase_service import FirebaseService
 from app.api.endpoints import stream_router
 from app.core.logging_config import setup_logging
 import logging
@@ -17,6 +18,18 @@ app = FastAPI(
 async def startup_event():
     logger.info(f"Iniciando {settings.APP_NAME}")
     logger.info(f"Modo debug: {settings.DEBUG}")
+    
+    # Verificar configuración de Firebase
+    try:
+        firebase_service = FirebaseService()
+        firebase_service.initialize(
+            cred_path=settings.FIREBASE_CRED_PATH,
+            database_url=settings.FIREBASE_DATABASE_URL
+        )
+        logger.info("Firebase inicializado correctamente")
+    except Exception as e:
+        logger.error(f"Error al inicializar Firebase: {str(e)}")
+        raise
 
 @app.get("/")
 async def root():

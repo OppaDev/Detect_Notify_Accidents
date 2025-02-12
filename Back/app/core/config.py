@@ -3,6 +3,7 @@ from pydantic_settings import BaseSettings
 import os
 from typing import ClassVar
 
+
 class Settings(BaseSettings):
     APP_NAME: str = "Fall Detection API"
     DEBUG: bool = True
@@ -33,5 +34,14 @@ class Settings(BaseSettings):
                 f"ERROR CRÍTICO: Modelo no encontrado en {self.MODEL_PATH}"
             )
         return True
+    #Configuración de Firebase
+    FIREBASE_CRED_PATH: str = "app/core/credentials/firebase-credenciales.json"
+    FIREBASE_DATABASE_URL: str = "https://fallapp-6d506.firebaseio.com"
+    
+    # Configuración de detección
+    DETECTION_THRESHOLD: float = 0.5  # Umbral de confianza para notificaciones
+    NOTIFICATION_COOLDOWN: int = 30  # Segundos entre notificaciones
+
 
 settings = Settings()
+

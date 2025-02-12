@@ -1,3 +1,6 @@
-app\__pycache__
+# Back/.gitignore
+app/__pycache__
 index.html
 probando.ipynb
+.env
+app/core/credentials/*.json

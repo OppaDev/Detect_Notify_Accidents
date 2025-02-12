@@ -7,6 +7,8 @@ import cv2
 import numpy as np
 import asyncio
 import logging
+from app.services.firebase_service import FirebaseService
+from datetime import datetime
 
 router = APIRouter()
 video_service = VideoService()
@@ -23,6 +25,22 @@ async def try_reconnect_camera(video_service, max_attempts=3):
         await asyncio.sleep(1)
     logger.error("Todos los intentos de reconexión fallaron")
     return False
+
+# Inicializar servicios
+firebase_service = FirebaseService()
+
+@router.on_event("startup")
+async def startup_event():
+    """Inicializar Firebase al inicio"""
+    try:
+        firebase_service.initialize(
+            cred_path=settings.FIREBASE_CRED_PATH,
+            database_url=settings.FIREBASE_DATABASE_URL
+        )
+    except Exception as e:
+        logger.error(f"Error al inicializar Firebase: {str(e)}")
+        
+        
 
 # app/api/endpoints/stream.py
 @router.websocket("/ws/stream")
@@ -56,14 +74,32 @@ async def websocket_endpoint(websocket: WebSocket):
                 
                 results = await yolo_service.detect(frame)
                 boxes = yolo_service.get_boxes(results)
+                
+                # Procesar detecciones y enviar notificaciones si es necesario
+                for box in boxes:
+                    confidence = box['conf']
+                    class_id = box['class']
+                    
+                    # Si detectamos una caída (asumiendo que class_id 0 es caída)
+                    if class_id == 0 and confidence > settings.DETECTION_THRESHOLD:
+                        detection_data = {
+                            'confidence': float(confidence),
+                            'class_id': int(class_id),
+                            'bbox': box['bbox'],
+                            'location': 'Área de monitoreo 1',  # Personalizar según necesidad
+                        }
+                        
+                        # Intentar enviar notificación
+                        await firebase_service.save_detection(detection_data)
 
-                # Dibujar detecciones
+                # Dibujar detecciones de YOLO en el frame
                 for box in boxes:
                     x1, y1, x2, y2 = map(int, box['bbox'])
                     cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
                     cv2.putText(frame, f"C{box['class']}:{box['conf']:.2f}",
                               (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
+                # Enviar frame procesado al cliente
                 _, processed_buffer = cv2.imencode('.jpg', frame)
                 await websocket.send_bytes(processed_buffer.tobytes())
 
@@ -77,3 +113,4 @@ async def websocket_endpoint(websocket: WebSocket):
         logger.error(f"Error en websocket: {str(e)}")
     finally:
         video_service.disconnect(websocket)
+
