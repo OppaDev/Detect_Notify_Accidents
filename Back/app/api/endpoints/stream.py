@@ -27,7 +27,6 @@ async def try_reconnect_camera(video_service, max_attempts=3):
 @router.websocket("/ws/stream")
 async def websocket_endpoint(websocket: WebSocket):
     try:
-        # Conectar WebSocket
         await video_service.connect(websocket)
         logger.info(f"Buscando modelo en: {settings.MODEL_PATH}")
         
@@ -51,20 +50,17 @@ async def websocket_endpoint(websocket: WebSocket):
         frame_count = 0
         
         while True:
-            if websocket.client_state.DISCONNECTED:
-                logger.info("Cliente desconectado, terminando streaming")
-                break
-
-            if not video_service.is_running:
-                logger.warning("Cámara no está corriendo, intentando reconectar")
-                if not await try_reconnect_camera(video_service):
-                    logger.error("Fallo en la reconexión de la cámara")
-                    break
-                
+            # Cambiamos la verificación de desconexión
             try:
+                # Intentamos hacer un ping para verificar la conexión
+                if not websocket.client_state.connected:
+                    logger.info("Cliente desconectado, terminando streaming")
+                    break
+
                 frame_buffer = await video_service.get_frame()
                 if frame_buffer is None:
                     logger.warning("Frame vacío recibido")
+                    await asyncio.sleep(0.1)  # Pequeña pausa antes de reintentar
                     continue
 
                 # Convertir el buffer a frame
@@ -86,10 +82,7 @@ async def websocket_endpoint(websocket: WebSocket):
                         conf = box['conf']
                         cls = box['class']
                         
-                        # Convertir coordenadas float a int
                         x1, y1, x2, y2 = map(int, bbox)
-                        
-                        # Dibujar rectángulo y confianza
                         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
                         cv2.putText(frame, f"C{cls}:{conf:.2f}", (x1, y1-10),
                                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
@@ -97,36 +90,28 @@ async def websocket_endpoint(websocket: WebSocket):
                     # Convertir frame procesado a JPEG
                     _, processed_buffer = cv2.imencode('.jpg', frame)
                     
-                    if not websocket.client_state.DISCONNECTED:
-                        await websocket.send_bytes(processed_buffer.tobytes())
-                        frame_count += 1
-                        if frame_count % 100 == 0:  # Log cada 100 frames
-                            logger.debug(f"Frames procesados: {frame_count}")
-                    else:
-                        break
+                    # Enviar frame
+                    await websocket.send_bytes(processed_buffer.tobytes())
+                    frame_count += 1
+                    if frame_count % 100 == 0:
+                        logger.debug(f"Frames procesados: {frame_count}")
 
                 except Exception as e:
                     logger.error(f"Error en el procesamiento YOLO: {str(e)}")
-                    if not websocket.client_state.DISCONNECTED:
-                        await websocket.send_bytes(frame_buffer.tobytes())
-                    else:
-                        break
+                    # Enviar frame sin procesar en caso de error
+                    await websocket.send_bytes(frame_buffer.tobytes())
 
             except WebSocketDisconnect:
                 logger.info("Cliente desconectado durante el streaming")
                 break
             except Exception as e:
                 logger.error(f"Error en el proceso de streaming: {str(e)}")
-                if not websocket.client_state.DISCONNECTED:
-                    await asyncio.sleep(0.1)
-                else:
-                    break
+                await asyncio.sleep(0.1)
 
     except WebSocketDisconnect:
         logger.info("Cliente desconectado normalmente")
     except Exception as e:
         logger.error(f"Error general en websocket: {str(e)}")
     finally:
-        # Asegurarse de limpiar recursos
         video_service.disconnect(websocket)
         logger.info(f"Conexión cerrada y recursos liberados. Total frames procesados: {frame_count}")
