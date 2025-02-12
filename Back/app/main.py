@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from app.core import settings
 from app.services.firebase_service import FirebaseService
-from app.api.endpoints import stream_router, notifications
+from app.api.endpoints import stream_router, notifications_router 
 from app.core.logging_config import setup_logging
 from app.services.notification_listener import NotificationListener
 import logging
@@ -70,8 +70,13 @@ async def test_firebase():
         return {"status": "error", "message": str(e)}
 
 app.include_router(
-                stream_router, 
-                notifications.router,
-                prefix=settings.API_V1_STR,
-                tags=["notifications"])
+    stream_router,
+    prefix=settings.API_V1_STR,
+    tags=["stream"]
+)
 
+app.include_router(
+    notifications_router.router,
+    prefix=settings.API_V1_STR,
+    tags=["notifications"]
+)
