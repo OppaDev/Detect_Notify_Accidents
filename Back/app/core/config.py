@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     # Configuraciones para video
     CAMERA_URL: str = "http://192.168.100.169:4747/video"
     
+    # Configuración del modelo YOLO
+    MODEL_PATH: str = "../best.pt"  # Ruta a tu modelo entrenado
+    
     class Config:
         env_file = ".env"
 
