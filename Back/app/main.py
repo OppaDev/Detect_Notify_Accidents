@@ -69,7 +69,9 @@ async def test_firebase():
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
-app.include_router(stream_router, 
+app.include_router(
+                stream_router, 
+                notifications.router,
                 prefix=settings.API_V1_STR,
                 tags=["notifications"])
 
