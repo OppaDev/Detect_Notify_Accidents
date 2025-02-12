@@ -15,8 +15,10 @@ async def websocket_endpoint(websocket: WebSocket):
     try:
         await video_service.connect(websocket)
         
+        print(f"Buscando modelo en: {settings.MODEL_PATH}")
+        
         # Inicializar YOLO
-        await yolo_service.initialize("best.pt")  # Usa tu modelo entrenado
+        await yolo_service.initialize(settings.MODEL_PATH)  # Usa tu modelo entrenado
         
         if not await video_service.initialize_camera(settings.CAMERA_URL):
             await websocket.close(code=1001, reason="No se pudo inicializar la cámara")
