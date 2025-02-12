@@ -36,7 +36,7 @@ class Settings(BaseSettings):
         return True
     #Configuración de Firebase
     FIREBASE_CRED_PATH: str = "app/core/credentials/firebase-credenciales.json"
-    FIREBASE_DATABASE_URL: str = "https://fallapp-6d506.firebaseio.com"
+    FIREBASE_DATABASE_URL: str = "https://fallapp-6d506-default-rtdb.firebaseio.com"
     
     # Configuración de detección
     DETECTION_THRESHOLD: float = 0.5  # Umbral de confianza para notificaciones
