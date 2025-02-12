@@ -24,3 +24,5 @@ async def notifications_websocket(websocket: WebSocket):
     except Exception as e:
         logger.error(f"Error en conexión WebSocket: {str(e)}")
         notification_listener.disconnect(websocket)
+
+notifications_router = router

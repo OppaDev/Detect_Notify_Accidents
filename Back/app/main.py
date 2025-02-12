@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from app.core import settings
 from app.services.firebase_service import FirebaseService
-from app.api.endpoints import stream_router, notifications_router 
+from app.api.endpoints import stream_router, notifications_router
 from app.core.logging_config import setup_logging
 from app.services.notification_listener import NotificationListener
 import logging
