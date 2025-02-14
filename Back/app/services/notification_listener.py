@@ -24,6 +24,7 @@ class NotificationListener:
         self.active_connections: List[WebSocket] = []
         self.stream = None
         self._initialized = True
+        self.loop = None
 
     async def connect(self, websocket: WebSocket):
         """Conecta un nuevo cliente WebSocket"""
@@ -40,6 +41,7 @@ class NotificationListener:
     def start_listening(self):
         """Inicia la escucha de nuevas notificaciones"""
         try:
+            self.loop = asyncio.get_event_loop()
             notifications_ref = db.reference('notifications')
             
             def on_notification(event):
@@ -49,7 +51,12 @@ class NotificationListener:
                         'data': event.data,
                         'timestamp': datetime.now().isoformat()
                     }
-                    asyncio.create_task(self._broadcast_notification(notification_data))
+                    self.loop.call_soon_threadsafe(
+                        lambda: self.loop.create_task(
+                            self._broadcast_notification(notification_data)
+                        )
+                    )
+                
 
             self.stream = notifications_ref.listen(on_notification)
             self.logger.info("Listener de notificaciones iniciado")

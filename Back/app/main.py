@@ -76,7 +76,7 @@ app.include_router(
 )
 
 app.include_router(
-    notifications_router.router,
+    notifications_router,
     prefix=settings.API_V1_STR,
     tags=["notifications"]
 )
