@@ -3,3 +3,5 @@ index.html
 probando.ipynb
 .env
 app/core/credentials/*.json
+**/__pycache__/
+__pycache__/
