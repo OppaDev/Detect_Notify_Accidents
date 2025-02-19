@@ -80,7 +80,7 @@ class FirebaseService:
         """
         try:
             notification_data = {
-                'title': 'Posible Accidente Detectado',
+                'title': 'CAIDA DETECTADA',
                 'body': f"Se ha detectado un posible accidente con confianza: {detection_data.get('confidence', 0):.2f}",
                 'timestamp': detection_data['timestamp'],
                 'status': 'new'

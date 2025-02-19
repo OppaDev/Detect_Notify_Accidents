@@ -94,10 +94,16 @@ async def websocket_endpoint(websocket: WebSocket):
 
                 # Dibujar detecciones de YOLO en el frame
                 for box in boxes:
-                    x1, y1, x2, y2 = map(int, box['bbox'])
-                    cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-                    cv2.putText(frame, f"C{box['class']}:{box['conf']:.2f}",
-                            (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                    if class_id == 0:
+                        x1, y1, x2, y2 = map(int, box['bbox'])
+                        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
+                        cv2.putText(frame, f"CAIDA:{box['conf']:.2f}",
+                                (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+                    else:
+                        x1, y1, x2, y2 = map(int, box['bbox'])
+                        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                        cv2.putText(frame, f"PERSONA:{box['conf']:.2f}",
+                                (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
                 # Enviar frame procesado al cliente
                 _, processed_buffer = cv2.imencode('.jpg', frame)
