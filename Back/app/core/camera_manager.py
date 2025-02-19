@@ -56,7 +56,7 @@ class CameraManager:
                 success = await self._capture_frame()
                 if not success:
                     logger.warning("Error al capturar frame")
-                    await asyncio.sleep(0.1)
+                    await asyncio.sleep(0.01)
                     continue
 
                 # Mantener solo el frame más reciente
@@ -70,7 +70,7 @@ class CameraManager:
                 
             except Exception as e:
                 logger.error(f"Error en procesamiento de frames: {str(e)}")
-                await asyncio.sleep(0.1)
+                await asyncio.sleep(0.01)
 
     async def _capture_frame(self) -> bool:
         """Captura un frame de la cámara de manera asíncrona"""

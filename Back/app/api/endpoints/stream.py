@@ -113,7 +113,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 break
             except Exception as e:
                 logger.error(f"Error en streaming: {str(e)}")
-                await asyncio.sleep(0.1)
+                await asyncio.sleep(0.01)
 
     except Exception as e:
         logger.error(f"Error en websocket: {str(e)}")
