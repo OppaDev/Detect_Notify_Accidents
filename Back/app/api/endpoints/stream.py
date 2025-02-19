@@ -97,7 +97,7 @@ async def websocket_endpoint(websocket: WebSocket):
                     x1, y1, x2, y2 = map(int, box['bbox'])
                     cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
                     cv2.putText(frame, f"C{box['class']}:{box['conf']:.2f}",
-                              (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                            (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
                 # Enviar frame procesado al cliente
                 _, processed_buffer = cv2.imencode('.jpg', frame)

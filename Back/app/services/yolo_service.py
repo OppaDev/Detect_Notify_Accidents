@@ -10,7 +10,7 @@ class YoloService:
         self.initialized = False
         self.logger = logging.getLogger(__name__)
 
-    async def initialize(self, model_path: str = "yolov8n.pt"):
+    async def initialize(self, model_path: str = "best.pt"):
         """Inicializa el modelo YOLO"""
         if not self.initialized:
             try:
@@ -18,9 +18,9 @@ class YoloService:
                     raise FileNotFoundError(f"Modelo no encontrado en: {model_path}")
                 
                 self.logger.info(f"Cargando modelo desde: {model_path}")
-                self.model = YOLO(model_path)
+                self.model = YOLO(model_path).to("cuda:0")
                 self.initialized = True
-                self.logger.info("Modelo YOLO inicializado correctamente")
+                self.logger.info("Modelo YOLO inicializado correctamente con gpu")
             except Exception as e:
                 self.logger.error(f"Error al inicializar YOLO: {str(e)}")
                 raise Exception(f"Error al inicializar YOLO: {str(e)}")
