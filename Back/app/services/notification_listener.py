@@ -1,5 +1,4 @@
 # app/services/notification_listener.py
-
 from firebase_admin import db
 import asyncio
 from typing import Callable, Dict, List
@@ -19,7 +18,7 @@ class NotificationListener:
     def __init__(self):
         if self._initialized:
             return
-            
+
         self.logger = logging.getLogger(__name__)
         self.active_connections: List[WebSocket] = []
         self.stream = None
@@ -43,7 +42,7 @@ class NotificationListener:
         try:
             self.loop = asyncio.get_event_loop()
             notifications_ref = db.reference('notifications')
-            
+
             def on_notification(event):
                 if event.event_type == 'put' and event.data:
                     notification_data = {
@@ -56,11 +55,11 @@ class NotificationListener:
                             self._broadcast_notification(notification_data)
                         )
                     )
-                
+
 
             self.stream = notifications_ref.listen(on_notification)
             self.logger.info("Listener de notificaciones iniciado")
-            
+
         except Exception as e:
             self.logger.error(f"Error al iniciar listener: {str(e)}")
             raise
@@ -68,7 +67,7 @@ class NotificationListener:
     async def _broadcast_notification(self, notification: Dict):
         """Envía la notificación a todos los clientes conectados"""
         disconnected_clients = []
-        
+
         for websocket in self.active_connections:
             try:
                 await websocket.send_json(notification)

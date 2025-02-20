@@ -1,0 +1,15 @@
+# Back/.env
+
+# Firebase Configuration
+FIREBASE_CRED_PATH=app/core/credentials/firebase-credenciales.json
+FIREBASE_DATABASE_URL=https://fallapp-6d506-default-rtdb.firebaseio.com/
+
+# Detection Configuration
+DETECTION_THRESHOLD=0.5
+NOTIFICATION_COOLDOWN=30
+
+# App Configuration
+APP_NAME="Fall Detection API"
+DEBUG=True
+API_V1_STR="/api/v1"
+CAMERA_URL="http://192.168.100.169:4747/video"
