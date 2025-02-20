@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     
     # Configuraciones para video
-    CAMERA_URL: str = "http://192.168.0.103:4747/video"
+    CAMERA_URL: str = "http://192.168.0.102:4747/video"
     
     # Configuración del modelo YOLO
     BASE_DIR: ClassVar[str] = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

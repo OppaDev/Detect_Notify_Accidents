@@ -86,7 +86,7 @@ async def websocket_endpoint(websocket: WebSocket):
                             'confidence': float(confidence),
                             'class_id': int(class_id),
                             'bbox': box['bbox'],
-                            'location': 'Área de monitoreo 1',  # Personalizar según necesidad
+                            'location': 'Salon de Pruebas',  # Personalizar según necesidad
                         }
                         
                         # Intentar enviar notificación
