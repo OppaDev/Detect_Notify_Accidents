@@ -1,4 +1,5 @@
 # app/api/endpoints/stream.py
+
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 from app.services.video_service import VideoService
 from app.services.yolo_service import YoloService
@@ -39,84 +40,70 @@ async def startup_event():
         )
     except Exception as e:
         logger.error(f"Error al inicializar Firebase: {str(e)}")
-        
-        
 
 # app/api/endpoints/stream.py
+
 @router.websocket("/ws/stream")
 async def websocket_endpoint(websocket: WebSocket):
+    await video_service.connect(websocket)
+
     try:
-        await video_service.connect(websocket)
-        
-        # Inicializar YOLO
-        try:
-            await yolo_service.initialize(settings.MODEL_PATH)
-        except Exception as e:
-            logger.error(f"Error al inicializar YOLO: {str(e)}")
+        await yolo_service.initialize(settings.MODEL_PATH)
+    except Exception as e:
+        logger.error(f"Error al inicializar YOLO: {str(e)}")
+        await websocket.close(1001)
+        video_service.disconnect(websocket)  # Desconectar también en caso de error
+        return
+
+    # Inicializar cámara si no está iniciada
+    if not video_service.camera_manager.is_running:
+        if not await video_service.initialize_camera(settings.CAMERA_URL):
             await websocket.close(1001)
+            video_service.disconnect(websocket)  # Desconectar también en caso de error
             return
 
-        # Inicializar cámara si no está iniciada
-        if not video_service.camera_manager.is_running:
-            if not await video_service.initialize_camera(settings.CAMERA_URL):
-                await websocket.close(1001)
-                return
-
+    try:
         while True:
-            try:
-                frame_buffer = await video_service.get_frame()
-                if not frame_buffer:
-                    continue
+            frame = await video_service.get_frame()
+            if frame:
+                try:  # Añade un bloque try...except dentro del bucle
+                    await process_frame(frame, websocket)
+                except Exception as e:
+                    logger.error(f"Error al procesar el frame: {e}")
+                    break  # Sale del bucle si hay un error al procesar el frame
+            await asyncio.sleep(0.01)
+    except WebSocketDisconnect:
+        logger.info("Cliente WebSocket desconectado")
+    except Exception as e:
+        logger.error(f"Error en el websocket principal: {e}")
+    finally:
+        video_service.disconnect(websocket)  # Asegurar la desconexión aquí también
 
-                # Procesar frame con YOLO
-                frame_array = np.frombuffer(frame_buffer, dtype=np.uint8)
-                frame = cv2.imdecode(frame_array, cv2.IMREAD_COLOR)
-                
-                results = await yolo_service.detect(frame)
-                boxes = yolo_service.get_boxes(results)
-                
-                # Procesar detecciones y enviar notificaciones si es necesario
-                for box in boxes:
-                    confidence = box['conf']
-                    class_id = box['class']
-                    
-                    # Si detectamos una caída (asumiendo que class_id 0 es caída)
-                    if class_id == 0 and confidence > settings.DETECTION_THRESHOLD:
-                        detection_data = {
-                            'confidence': float(confidence),
-                            'class_id': int(class_id),
-                            'bbox': box['bbox'],
-                            'location': 'Área de monitoreo 1',  # Personalizar según necesidad
-                        }
-                        
-                        # Intentar enviar notificación
-                        await firebase_service.save_detection(detection_data)
 
-                # Dibujar detecciones de YOLO en el frame
-                for box in boxes:
-                    if class_id == 0:
-                        x1, y1, x2, y2 = map(int, box['bbox'])
-                        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
-                        cv2.putText(frame, f"CAIDA:{box['conf']:.2f}",
-                                (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
-                    else:
-                        x1, y1, x2, y2 = map(int, box['bbox'])
-                        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-                        cv2.putText(frame, f"PERSONA:{box['conf']:.2f}",
-                                (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+async def process_frame(frame_buffer, websocket: WebSocket):
+    try:
+        frame_array = np.frombuffer(frame_buffer, dtype=np.uint8)
+        frame = cv2.imdecode(frame_array, cv2.IMREAD_COLOR)
 
-                # Enviar frame procesado al cliente
-                _, processed_buffer = cv2.imencode('.jpg', frame)
-                await websocket.send_bytes(processed_buffer.tobytes())
+        # Detecta y encola la notificacion si se detecta
+        await yolo_service.detect_and_notify(frame)
+        # Procesa y agrega bordes a las detecciones
+        results = await yolo_service.detect(frame)
+        boxes = yolo_service.get_boxes(results)
 
-            except WebSocketDisconnect:
-                break
-            except Exception as e:
-                logger.error(f"Error en streaming: {str(e)}")
-                await asyncio.sleep(0.01)
+        # Dibujar detecciones de YOLO en el frame
+        for box in boxes:
+            x1, y1, x2, y2 = map(int, box['bbox'])
+            color = (0, 0, 255) if box['class'] == 0 else (0, 255, 0)
+            label = "CAIDA" if box['class'] == 0 else "PERSONA"
+            cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
+            cv2.putText(frame, f"{label}:{box['conf']:.2f}",
+                        (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+
+        # Enviar frame procesado al cliente
+        _, processed_buffer = cv2.imencode('.jpg', frame)
+        await websocket.send_bytes(processed_buffer.tobytes())
 
     except Exception as e:
-        logger.error(f"Error en websocket: {str(e)}")
-    finally:
-        video_service.disconnect(websocket)
-
+        logger.error(f"Error al procesar el frame: {e}")
+        raise
