@@ -5,6 +5,9 @@ import asyncio
 from datetime import datetime
 import logging
 from typing import Dict, Any
+import time
+from app.utils.csv_utils import write_to_csv
+
 
 class FirebaseService:
     _instance = None
@@ -59,6 +62,11 @@ class FirebaseService:
                 'timestamp': current_time.isoformat(),
                 'status': 'pending'  # pending, processed, ignored
             })
+            #medicion de tiempo
+            start_time = time.perf_counter()
+            
+            ref = self.db.child('detections').push(detection_data)
+            self.last_notification_time = current_time
 
             # Guardar en Firebase
             ref = self.db.child('detections').push(detection_data)
@@ -67,7 +75,23 @@ class FirebaseService:
             # Enviar notificación
             await self._send_notification(detection_data)
             
+            #medicion de tiempo final
+            end_time = time.perf_counter()
+            delta_time = (end_time - start_time) * 1000
+            
+            # --- LOGGING ---
+            self.logger.info(f"Tiempo inicial: {start_time * 1000:.2f} ms")
+            self.logger.info(f"Tiempo final: {end_time * 1000:.2f} ms")
+            self.logger.info(f"Tiempo transcurrido: {delta_time:.2f} ms")            
             self.logger.info(f"Detección guardada con ID: {ref.key}")
+            
+            # --- GUARDAR EN CSV ---
+            csv_data = {
+                'detection_id': {ref.key},                'start_time': f"{start_time * 1000:.2f}",
+                'end_time': f"{end_time * 1000:.2f}",
+                'delta_time': f"{delta_time:.2f}",
+            }
+            write_to_csv(csv_data)
             return True
 
         except Exception as e:

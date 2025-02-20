@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     
     # Configuraciones para video
-    CAMERA_URL: str = "http://192.168.0.102:4747/video"
+    CAMERA_URL: str = "http://10.40.8.151:4747/video"
     
     # Configuración del modelo YOLO
     BASE_DIR: ClassVar[str] = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +39,7 @@ class Settings(BaseSettings):
     FIREBASE_DATABASE_URL: str = "https://fallapp-6d506-default-rtdb.firebaseio.com"
     
     # Configuración de detección
-    DETECTION_THRESHOLD: float = 0.9  # Umbral de confianza para notificaciones
+    DETECTION_THRESHOLD: float = 0.2  # Umbral de confianza para notificaciones
     NOTIFICATION_COOLDOWN: int = 50  # Segundos entre notificaciones
 
 
