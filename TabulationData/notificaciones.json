@@ -1,0 +1,606 @@
+{
+    "notifications": {
+    "-OJZAXGZCtA9lqD0uRbe": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.76",
+      "detection_time": "2025-02-20T11:25:59.480026",
+      "status": "new",
+      "timestamp": "2025-02-20T11:25:59.480059",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZAi_b_WmAdxbujXjn": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T11:26:50.138218",
+      "status": "new",
+      "timestamp": "2025-02-20T11:26:50.138244",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZAvPzYHuuS9Yy-7Zw": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.78",
+      "detection_time": "2025-02-20T11:27:42.640305",
+      "status": "new",
+      "timestamp": "2025-02-20T11:27:42.640318",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZB7glW1kp-wPcB8Ug": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.73",
+      "detection_time": "2025-02-20T11:28:37.091532",
+      "status": "new",
+      "timestamp": "2025-02-20T11:28:37.091553",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZBK-9ivTlfCTioHy6": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.85",
+      "detection_time": "2025-02-20T11:29:27.495494",
+      "status": "new",
+      "timestamp": "2025-02-20T11:29:27.495507",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZBWuXSzTXnJ1H8aaQ": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.77",
+      "detection_time": "2025-02-20T11:30:20.385087",
+      "status": "new",
+      "timestamp": "2025-02-20T11:30:20.385108",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZBy3XcnUAXhGLTn9S": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.79",
+      "detection_time": "2025-02-20T11:32:15.235767",
+      "status": "new",
+      "timestamp": "2025-02-20T11:32:15.235801",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZCAN_MoWrfr1pLAw0": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.87",
+      "detection_time": "2025-02-20T11:33:10.239098",
+      "status": "new",
+      "timestamp": "2025-02-20T11:33:10.239112",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZCQRIJyCeGpPD1st_": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.84",
+      "detection_time": "2025-02-20T11:34:16.024703",
+      "status": "new",
+      "timestamp": "2025-02-20T11:34:16.024720",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZCfeTZ2eGow580RY-": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.73",
+      "detection_time": "2025-02-20T11:35:22.387647",
+      "status": "new",
+      "timestamp": "2025-02-20T11:35:22.387688",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZCuMYWBnMzV7fJjGO": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T11:36:22.687026",
+      "status": "new",
+      "timestamp": "2025-02-20T11:36:22.687040",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZD5elyPI31bgpXknc": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.72",
+      "detection_time": "2025-02-20T11:37:13.087551",
+      "status": "new",
+      "timestamp": "2025-02-20T11:37:13.087565",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZDO9rdIWFbjPGUEGW": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.73",
+      "detection_time": "2025-02-20T11:38:28.373082",
+      "status": "new",
+      "timestamp": "2025-02-20T11:38:28.373100",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZDg_kJvq_lvwsJ7bl": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.79",
+      "detection_time": "2025-02-20T11:39:48.133981",
+      "status": "new",
+      "timestamp": "2025-02-20T11:39:48.134005",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZDuUGeO6IuoSOUonz": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.80",
+      "detection_time": "2025-02-20T11:40:45.304010",
+      "status": "new",
+      "timestamp": "2025-02-20T11:40:45.304028",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZE6M6E5ITW0MV3mbE": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.85",
+      "detection_time": "2025-02-20T11:41:38.004945",
+      "status": "new",
+      "timestamp": "2025-02-20T11:41:38.004972",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZEIjFyCLAIknTOyNQ": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T11:42:28.643855",
+      "status": "new",
+      "timestamp": "2025-02-20T11:42:28.643877",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZEV0s9Va5vpOyMCqT": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.83",
+      "detection_time": "2025-02-20T11:43:19.095188",
+      "status": "new",
+      "timestamp": "2025-02-20T11:43:19.095227",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZEgfm24NXDlMQIY9l": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.78",
+      "detection_time": "2025-02-20T11:44:10.925582",
+      "status": "new",
+      "timestamp": "2025-02-20T11:44:10.925607",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZF2P2vAia6d8t-5qi": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T11:45:43.732830",
+      "status": "new",
+      "timestamp": "2025-02-20T11:45:43.732848",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZFNp2pyAWyM8I2Mda": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.75",
+      "detection_time": "2025-02-20T11:47:11.548669",
+      "status": "new",
+      "timestamp": "2025-02-20T11:47:11.548683",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZF_CUhLkvfbs9vIDo": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.77",
+      "detection_time": "2025-02-20T11:48:02.433066",
+      "status": "new",
+      "timestamp": "2025-02-20T11:48:02.433081",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZGWqq8jfKuZsZZyw0": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.77",
+      "detection_time": "2025-02-20T11:52:10.268491",
+      "status": "new",
+      "timestamp": "2025-02-20T11:52:10.268529",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZGiJWSMvLEdMjWOG3": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.86",
+      "detection_time": "2025-02-20T11:53:01.899961",
+      "status": "new",
+      "timestamp": "2025-02-20T11:53:01.899984",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZGve7vNrG2CNYAW-Q": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T11:53:56.509139",
+      "status": "new",
+      "timestamp": "2025-02-20T11:53:56.509154",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZH7mDTevwI-Mv_bfc": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T11:54:50.322194",
+      "status": "new",
+      "timestamp": "2025-02-20T11:54:50.322217",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZHKA_mKcmSRawuvsi": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T11:55:41.039190",
+      "status": "new",
+      "timestamp": "2025-02-20T11:55:41.039209",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZHWkjeTk0HmT2A3oW": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.73",
+      "detection_time": "2025-02-20T11:56:32.599920",
+      "status": "new",
+      "timestamp": "2025-02-20T11:56:32.599931",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZHipMpKOCVoPQ-onv": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T11:57:26.173312",
+      "status": "new",
+      "timestamp": "2025-02-20T11:57:26.173337",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZHwSJi1Z5zsQaO6bu": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T11:58:21.978290",
+      "status": "new",
+      "timestamp": "2025-02-20T11:58:21.978313",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZI8vh-2oUC4fG1MjA": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.72",
+      "detection_time": "2025-02-20T11:59:17.171946",
+      "status": "new",
+      "timestamp": "2025-02-20T11:59:17.171967",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZIXZRRdIH0FA_eJ_3": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.73",
+      "detection_time": "2025-02-20T12:00:57.766673",
+      "status": "new",
+      "timestamp": "2025-02-20T12:00:57.766688",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZIj0CXvPDsByai8P_": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.72",
+      "detection_time": "2025-02-20T12:01:48.931401",
+      "status": "new",
+      "timestamp": "2025-02-20T12:01:48.931413",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZIvWo_UAWMN4GQkav": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:02:40.314318",
+      "status": "new",
+      "timestamp": "2025-02-20T12:02:40.314339",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZJ6ockRgJpdWqNVc7": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.77",
+      "detection_time": "2025-02-20T12:03:30.655462",
+      "status": "new",
+      "timestamp": "2025-02-20T12:03:30.655483",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZJJ6fGplj9-6hH83R": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.72",
+      "detection_time": "2025-02-20T12:04:21.000976",
+      "status": "new",
+      "timestamp": "2025-02-20T12:04:21.000987",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZJXMRcVXOk7w9s98T": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T12:05:19.386882",
+      "status": "new",
+      "timestamp": "2025-02-20T12:05:19.386894",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZJidan5SRAPeixfET": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.81",
+      "detection_time": "2025-02-20T12:06:09.703181",
+      "status": "new",
+      "timestamp": "2025-02-20T12:06:09.703193",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZJv-4TBvfFzxBIpLt": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.77",
+      "detection_time": "2025-02-20T12:07:00.292590",
+      "status": "new",
+      "timestamp": "2025-02-20T12:07:00.292603",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZK6KC44Jm3ve-ehUy": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T12:07:50.788398",
+      "status": "new",
+      "timestamp": "2025-02-20T12:07:50.788411",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZKIkD3aWwpdwixEBA": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T12:08:41.669488",
+      "status": "new",
+      "timestamp": "2025-02-20T12:08:41.669499",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZKVDAujFZ40wPlFcf": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T12:09:32.753210",
+      "status": "new",
+      "timestamp": "2025-02-20T12:09:32.753222",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZKgolJycBdiMmcHVS": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:10:24.354327",
+      "status": "new",
+      "timestamp": "2025-02-20T12:10:24.354382",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZKtJl2W87j0YsxFHB": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.73",
+      "detection_time": "2025-02-20T12:11:15.571904",
+      "status": "new",
+      "timestamp": "2025-02-20T12:11:15.571921",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZL4fYWNuE0NcOgCI5": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:12:06.174189",
+      "status": "new",
+      "timestamp": "2025-02-20T12:12:06.174203",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZLHKGlsa-EMGgtfA6": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.75",
+      "detection_time": "2025-02-20T12:12:57.955208",
+      "status": "new",
+      "timestamp": "2025-02-20T12:12:57.955227",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZLUHUsqQ9tymstP_D": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:13:51.081136",
+      "status": "new",
+      "timestamp": "2025-02-20T12:13:51.081155",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZLmG7rAu18Dbeifz3": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.72",
+      "detection_time": "2025-02-20T12:15:08.505893",
+      "status": "new",
+      "timestamp": "2025-02-20T12:15:08.505911",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZLyZ6WrSCybJVWOgv": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.82",
+      "detection_time": "2025-02-20T12:15:59.171470",
+      "status": "new",
+      "timestamp": "2025-02-20T12:15:59.171493",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZMHGuBxu63EhdYGGj": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T12:17:19.673294",
+      "status": "new",
+      "timestamp": "2025-02-20T12:17:19.673316",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZMYHzcdMlMxW8WOYQ": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.72",
+      "detection_time": "2025-02-20T12:18:29.502372",
+      "status": "new",
+      "timestamp": "2025-02-20T12:18:29.502405",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZMlDAtTSgq210VGjI": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T12:19:26.654624",
+      "status": "new",
+      "timestamp": "2025-02-20T12:19:26.654636",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZMxljL4oXp0h5JkJd": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.75",
+      "detection_time": "2025-02-20T12:20:17.955745",
+      "status": "new",
+      "timestamp": "2025-02-20T12:20:17.955766",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZNBGAV9VMHlTDSeyo": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:21:16.987248",
+      "status": "new",
+      "timestamp": "2025-02-20T12:21:16.987260",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZNO1ryYp-N-p72Stg": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T12:22:09.739839",
+      "status": "new",
+      "timestamp": "2025-02-20T12:22:09.739858",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZN_NWRr2V0Jz5TANG": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.73",
+      "detection_time": "2025-02-20T12:23:00.312701",
+      "status": "new",
+      "timestamp": "2025-02-20T12:23:00.312720",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZNnUuJrVUMC6linyy": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.78",
+      "detection_time": "2025-02-20T12:23:58.124183",
+      "status": "new",
+      "timestamp": "2025-02-20T12:23:58.124231",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZO-8hRw-_KVV92W5e": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.80",
+      "detection_time": "2025-02-20T12:24:49.934263",
+      "status": "new",
+      "timestamp": "2025-02-20T12:24:49.934326",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZOMgI4YFaL4f6f7tm": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.73",
+      "detection_time": "2025-02-20T12:26:26.177797",
+      "status": "new",
+      "timestamp": "2025-02-20T12:26:26.177822",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZOZcJzq3KhSFDx4cl": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.77",
+      "detection_time": "2025-02-20T12:27:19.306376",
+      "status": "new",
+      "timestamp": "2025-02-20T12:27:19.306411",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZOlH46ihGiAhJlMOy": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.79",
+      "detection_time": "2025-02-20T12:28:11.183339",
+      "status": "new",
+      "timestamp": "2025-02-20T12:28:11.183370",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZOyjskz6TcA_OGN_K": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.75",
+      "detection_time": "2025-02-20T12:29:06.354242",
+      "status": "new",
+      "timestamp": "2025-02-20T12:29:06.354271",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZPAWF7w40TsUyyawI": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.73",
+      "detection_time": "2025-02-20T12:29:58.638423",
+      "status": "new",
+      "timestamp": "2025-02-20T12:29:58.638443",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZPVNf6g8O3Q1ny25f": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T12:31:23.692770",
+      "status": "new",
+      "timestamp": "2025-02-20T12:31:23.692786",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZPhM6LKXwClXQEIgU": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:32:17.194741",
+      "status": "new",
+      "timestamp": "2025-02-20T12:32:17.194755",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZPuQ8iRI89vD1ZWxP": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:33:10.793845",
+      "status": "new",
+      "timestamp": "2025-02-20T12:33:10.793872",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZQ719EXqFB-6Kk-gY": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:34:06.516259",
+      "status": "new",
+      "timestamp": "2025-02-20T12:34:06.516280",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZQV-7r6DGdUi04cjO": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.84",
+      "detection_time": "2025-02-20T12:35:44.431308",
+      "status": "new",
+      "timestamp": "2025-02-20T12:35:44.431340",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZQgcva3vp4TgzXrry": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T12:36:36.373986",
+      "status": "new",
+      "timestamp": "2025-02-20T12:36:36.374006",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZR0JB9P8CAAg417YK": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.72",
+      "detection_time": "2025-02-20T12:38:00.117404",
+      "status": "new",
+      "timestamp": "2025-02-20T12:38:00.117432",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZRHKmP49MoBxLZEsz": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.80",
+      "detection_time": "2025-02-20T12:39:10.882159",
+      "status": "new",
+      "timestamp": "2025-02-20T12:39:10.882189",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZRaGLvCzXTD6rposB": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.75",
+      "detection_time": "2025-02-20T12:40:31.610052",
+      "status": "new",
+      "timestamp": "2025-02-20T12:40:31.610075",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZRnw0DdcH0gJ1A5Gu": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:41:28.478983",
+      "status": "new",
+      "timestamp": "2025-02-20T12:41:28.479001",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZS-FaewfjhAYA4bzo": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T12:42:18.987391",
+      "status": "new",
+      "timestamp": "2025-02-20T12:42:18.987416",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZSDxFDvmwez_i01mc": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T12:43:19.027935",
+      "status": "new",
+      "timestamp": "2025-02-20T12:43:19.027963",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZSQO89GxJ58awIsnj": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.75",
+      "detection_time": "2025-02-20T12:44:09.866685",
+      "status": "new",
+      "timestamp": "2025-02-20T12:44:09.866701",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZSfzSoBpRE0EyIF_x": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.72",
+      "detection_time": "2025-02-20T12:45:18.098836",
+      "status": "new",
+      "timestamp": "2025-02-20T12:45:18.098862",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZStMhjTJB9VBvpn0x": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T12:46:12.784205",
+      "status": "new",
+      "timestamp": "2025-02-20T12:46:12.784218",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZT50kaUYSL8MuGG1g": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.71",
+      "detection_time": "2025-02-20T12:47:04.584898",
+      "status": "new",
+      "timestamp": "2025-02-20T12:47:04.584914",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZTKhhG-MK80khatXf": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.70",
+      "detection_time": "2025-02-20T12:48:08.984506",
+      "status": "new",
+      "timestamp": "2025-02-20T12:48:08.984522",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZTXBFzrAwBR5eXTGD": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.82",
+      "detection_time": "2025-02-20T12:49:00.096576",
+      "status": "new",
+      "timestamp": "2025-02-20T12:49:00.096598",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZTiUqOyE1i0-6YJ0V": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.83",
+      "detection_time": "2025-02-20T12:49:50.433153",
+      "status": "new",
+      "timestamp": "2025-02-20T12:49:50.433189",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZTvt_8btV456f3j7y": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T12:50:45.382088",
+      "status": "new",
+      "timestamp": "2025-02-20T12:50:45.382100",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZU7HIaIQ7u0j1fXNd": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.78",
+      "detection_time": "2025-02-20T12:51:36.145062",
+      "status": "new",
+      "timestamp": "2025-02-20T12:51:36.145088",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZULBiPKmGGMbQui8z": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.74",
+      "detection_time": "2025-02-20T12:52:33.007848",
+      "status": "new",
+      "timestamp": "2025-02-20T12:52:33.007858",
+      "title": "CAIDA DETECTADA"
+    },
+    "-OJZUYt0hpO8oyfKZgCl": {
+      "body": "Se ha detectado un posible accidente con confianza: 0.72",
+      "detection_time": "2025-02-20T12:53:28.992226",
+      "status": "new",
+      "timestamp": "2025-02-20T12:53:28.992239",
+      "title": "CAIDA DETECTADA"
+    }
+  }
+}

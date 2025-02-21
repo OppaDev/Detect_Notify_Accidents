@@ -1,0 +1,1294 @@
+{
+  "detections": {
+    "-OJZAXEG-gNLhjio-ONJ": {
+      "bbox": [
+        0,
+        118.58786010742188,
+        80.49955749511719,
+        319.301025390625
+      ],
+      "class_id": 0,
+      "confidence": 0.7627853155136108,
+      "detection_time": "2025-02-20T11:25:59.480026",
+      "duration": 0.03489,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:25:59.480059"
+    },
+    "-OJZAiYHHCSiIL2ZwCO4": {
+      "bbox": [
+        290.8800354003906,
+        142.619873046875,
+        405.5135192871094,
+        235.232666015625
+      ],
+      "class_id": 0,
+      "confidence": 0.7024329900741577,
+      "detection_time": "2025-02-20T11:26:50.138218",
+      "duration": 0.0302,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:26:50.138244"
+    },
+    "-OJZAvMj3BfRZQyMs1AP": {
+      "bbox": [
+        245.78211975097656,
+        179.58377075195312,
+        342.2703857421875,
+        257.9234924316406
+      ],
+      "class_id": 0,
+      "confidence": 0.7830248475074768,
+      "detection_time": "2025-02-20T11:27:42.640305",
+      "duration": 0.030226,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:27:42.640318"
+    },
+    "-OJZB7eAsAxco3mFQniU": {
+      "bbox": [
+        119.22503662109375,
+        132.19686889648438,
+        252.1488037109375,
+        316.2221374511719
+      ],
+      "class_id": 0,
+      "confidence": 0.7289890050888062,
+      "detection_time": "2025-02-20T11:28:37.091532",
+      "duration": 0.037593,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:28:37.091553"
+    },
+    "-OJZBJxyumOdxSsuXYOw": {
+      "bbox": [
+        244.37591552734375,
+        172.12173461914062,
+        408.6273193359375,
+        271.1822814941406
+      ],
+      "class_id": 0,
+      "confidence": 0.8453856706619263,
+      "detection_time": "2025-02-20T11:29:27.495494",
+      "duration": 0.020552,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:29:27.495507"
+    },
+    "-OJZBWs2vcPywvBH-e3t": {
+      "bbox": [
+        247.55560302734375,
+        161.34414672851562,
+        416.17620849609375,
+        269.3078308105469
+      ],
+      "class_id": 0,
+      "confidence": 0.7651083469390869,
+      "detection_time": "2025-02-20T11:30:20.385087",
+      "duration": 0.023194,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:30:20.385108"
+    },
+    "-OJZBy0ns09S0j2JeTzo": {
+      "bbox": [
+        244.61154174804688,
+        198.752685546875,
+        343.0998229980469,
+        279.11712646484375
+      ],
+      "class_id": 0,
+      "confidence": 0.7879219651222229,
+      "detection_time": "2025-02-20T11:32:15.235767",
+      "duration": 0.031551,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:32:15.235801"
+    },
+    "-OJZCAL6jkMbyaK_SThe": {
+      "bbox": [
+        547.09326171875,
+        217.04457092285156,
+        640,
+        403.9400634765625
+      ],
+      "class_id": 0,
+      "confidence": 0.871010959148407,
+      "detection_time": "2025-02-20T11:33:10.239098",
+      "duration": 0.027583,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:33:10.239112"
+    },
+    "-OJZCQP09GWnuuqciL8N": {
+      "bbox": [
+        244.22747802734375,
+        193.56341552734375,
+        342.98809814453125,
+        272.6785888671875
+      ],
+      "class_id": 0,
+      "confidence": 0.8371100425720215,
+      "detection_time": "2025-02-20T11:34:16.024703",
+      "duration": 0.046746,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:34:16.024720"
+    },
+    "-OJZCfbyEPxbLzVFucXC": {
+      "bbox": [
+        577.162353515625,
+        106.11432647705078,
+        640,
+        306.98284912109375
+      ],
+      "class_id": 0,
+      "confidence": 0.7310824990272522,
+      "detection_time": "2025-02-20T11:35:22.387647",
+      "duration": 0.033934,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:35:22.387688"
+    },
+    "-OJZCuKADjfCk_4KLjJd": {
+      "bbox": [
+        96.74207305908203,
+        132.38323974609375,
+        332.64306640625,
+        296.66845703125
+      ],
+      "class_id": 0,
+      "confidence": 0.7048873901367188,
+      "detection_time": "2025-02-20T11:36:22.687026",
+      "duration": 0.026326,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:36:22.687040"
+    },
+    "-OJZD5cYnaVpwQ8mGTPW": {
+      "bbox": [
+        266.58648681640625,
+        197.2120361328125,
+        414.03057861328125,
+        257.76348876953125
+      ],
+      "class_id": 0,
+      "confidence": 0.7207697629928589,
+      "detection_time": "2025-02-20T11:37:13.087551",
+      "duration": 0.017216,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:37:13.087565"
+    },
+    "-OJZDO7Cl6PflpfAS9Ur": {
+      "bbox": [
+        208.0995635986328,
+        143.55581665039062,
+        378.55133056640625,
+        287.65277099609375
+      ],
+      "class_id": 0,
+      "confidence": 0.7255184054374695,
+      "detection_time": "2025-02-20T11:38:28.373082",
+      "duration": 0.021622,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:38:28.373100"
+    },
+    "-OJZDgXsic76peLNW8DS": {
+      "bbox": [
+        205.53456115722656,
+        189.35003662109375,
+        371.706787109375,
+        285.1185302734375
+      ],
+      "class_id": 0,
+      "confidence": 0.793251633644104,
+      "detection_time": "2025-02-20T11:39:48.133981",
+      "duration": 0.046243,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:39:48.134005"
+    },
+    "-OJZDuRWGCFUodtOvmuV": {
+      "bbox": [
+        553.456787109375,
+        298.0492248535156,
+        639.980712890625,
+        480
+      ],
+      "class_id": 0,
+      "confidence": 0.8024464249610901,
+      "detection_time": "2025-02-20T11:40:45.304010",
+      "duration": 0.03349,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:40:45.304028"
+    },
+    "-OJZE6JRR-ZzSBXKuwgB": {
+      "bbox": [
+        201.84344482421875,
+        154.92486572265625,
+        371.96685791015625,
+        285.9475402832031
+      ],
+      "class_id": 0,
+      "confidence": 0.8459024429321289,
+      "detection_time": "2025-02-20T11:41:38.004945",
+      "duration": 0.017563,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:41:38.004972"
+    },
+    "-OJZEIfKicV1nXUmdDqF": {
+      "bbox": [
+        200.98074340820312,
+        213.74972534179688,
+        369.4344787597656,
+        283.42108154296875
+      ],
+      "class_id": 0,
+      "confidence": 0.7383768558502197,
+      "detection_time": "2025-02-20T11:42:28.643855",
+      "duration": 0.028989,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:42:28.643877"
+    },
+    "-OJZEUzQnahN4cQefuKC": {
+      "bbox": [
+        196.08717346191406,
+        216.93658447265625,
+        364.8692626953125,
+        275.1851806640625
+      ],
+      "class_id": 0,
+      "confidence": 0.8301764726638794,
+      "detection_time": "2025-02-20T11:43:19.095188",
+      "duration": 0.096894,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:43:19.095227"
+    },
+    "-OJZEgdPXW0-zqBesUnB": {
+      "bbox": [
+        192.45343017578125,
+        160.48898315429688,
+        360.814208984375,
+        279.488525390625
+      ],
+      "class_id": 0,
+      "confidence": 0.7833383083343506,
+      "detection_time": "2025-02-20T11:44:10.925582",
+      "duration": 0.047968,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:44:10.925607"
+    },
+    "-OJZF2MnWDCjNQ2eN7i9": {
+      "bbox": [
+        330.7015380859375,
+        200.98329162597656,
+        432.9637451171875,
+        335.74853515625
+      ],
+      "class_id": 0,
+      "confidence": 0.7435448169708252,
+      "detection_time": "2025-02-20T11:45:43.732830",
+      "duration": 0.028316,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:45:43.732848"
+    },
+    "-OJZFNme1aEBn4PcdZGR": {
+      "bbox": [
+        578.315673828125,
+        153.76962280273438,
+        639.869140625,
+        342.06536865234375
+      ],
+      "class_id": 0,
+      "confidence": 0.7465465664863586,
+      "detection_time": "2025-02-20T11:47:11.548669",
+      "duration": 0.02514,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:47:11.548683"
+    },
+    "-OJZF_9t733GoCwIN5MO": {
+      "bbox": [
+        584.9591064453125,
+        129.85491943359375,
+        639.9891357421875,
+        366.79022216796875
+      ],
+      "class_id": 0,
+      "confidence": 0.7690228819847107,
+      "detection_time": "2025-02-20T11:48:02.433066",
+      "duration": 0.023693,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:48:02.433081"
+    },
+    "-OJZGWoOY7vRQVxbe75G": {
+      "bbox": [
+        583.0774536132812,
+        128.1395263671875,
+        639.9674682617188,
+        479.96783447265625
+      ],
+      "class_id": 0,
+      "confidence": 0.7670137286186218,
+      "detection_time": "2025-02-20T11:52:10.268491",
+      "duration": 0.060754,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:52:10.268529"
+    },
+    "-OJZGiGhtyuiqvGFpy82": {
+      "bbox": [
+        183.884521484375,
+        86.80941772460938,
+        454.0465087890625,
+        478.5450744628906
+      ],
+      "class_id": 0,
+      "confidence": 0.8595107793807983,
+      "detection_time": "2025-02-20T11:53:01.899961",
+      "duration": 0.038044,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:53:01.899984"
+    },
+    "-OJZGvayKqGklzsAz0sP": {
+      "bbox": [
+        123.091796875,
+        121.82431030273438,
+        414.9512939453125,
+        325.9580078125
+      ],
+      "class_id": 0,
+      "confidence": 0.7070247530937195,
+      "detection_time": "2025-02-20T11:53:56.509139",
+      "duration": 0.016746,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:53:56.509154"
+    },
+    "-OJZH7jwHqd6lFBhrRgy": {
+      "bbox": [
+        156.15728759765625,
+        83.1803970336914,
+        435.37847900390625,
+        311.9122009277344
+      ],
+      "class_id": 0,
+      "confidence": 0.7006546258926392,
+      "detection_time": "2025-02-20T11:54:50.322194",
+      "duration": 0.031413,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:54:50.322217"
+    },
+    "-OJZHK7az5w8pqHlatRs": {
+      "bbox": [
+        160.1291046142578,
+        120.50909423828125,
+        461.37701416015625,
+        312.18023681640625
+      ],
+      "class_id": 0,
+      "confidence": 0.7112972140312195,
+      "detection_time": "2025-02-20T11:55:41.039190",
+      "duration": 0.01895,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:55:41.039209"
+    },
+    "-OJZHWhtFmElLU6FAtM0": {
+      "bbox": [
+        158.61773681640625,
+        127.6054458618164,
+        321.9157409667969,
+        319.7037658691406
+      ],
+      "class_id": 0,
+      "confidence": 0.72849041223526,
+      "detection_time": "2025-02-20T11:56:32.599920",
+      "duration": 0.026921,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:56:32.599931"
+    },
+    "-OJZHimw5pcVtnTc5gyQ": {
+      "bbox": [
+        0.0931396484375,
+        118.781005859375,
+        307.99688720703125,
+        320.16192626953125
+      ],
+      "class_id": 0,
+      "confidence": 0.7054583430290222,
+      "detection_time": "2025-02-20T11:57:26.173312",
+      "duration": 0.019469,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:57:26.173337"
+    },
+    "-OJZHwQ3ERBJ6xUrw8wD": {
+      "bbox": [
+        152.77099609375,
+        108.4529800415039,
+        438.8096923828125,
+        290.6967468261719
+      ],
+      "class_id": 0,
+      "confidence": 0.7431280612945557,
+      "detection_time": "2025-02-20T11:58:21.978290",
+      "duration": 0.031595,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:58:21.978313"
+    },
+    "-OJZI8tQ13iVlLv-fnIz": {
+      "bbox": [
+        297.7955627441406,
+        124.03680419921875,
+        486.2892761230469,
+        306.93621826171875
+      ],
+      "class_id": 0,
+      "confidence": 0.7157500982284546,
+      "detection_time": "2025-02-20T11:59:17.171946",
+      "duration": 0.031092,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T11:59:17.171967"
+    },
+    "-OJZIXXLOjQRyJkQbOCx": {
+      "bbox": [
+        0.0984039306640625,
+        95.056640625,
+        180.7465362548828,
+        442.31768798828125
+      ],
+      "class_id": 0,
+      "confidence": 0.7349366545677185,
+      "detection_time": "2025-02-20T12:00:57.766673",
+      "duration": 0.017002,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:00:57.766688"
+    },
+    "-OJZIiwtVnmI0XVmEQGp": {
+      "bbox": [
+        464.2872314453125,
+        98.84417724609375,
+        639.6884765625,
+        307.3848571777344
+      ],
+      "class_id": 0,
+      "confidence": 0.7167471051216125,
+      "detection_time": "2025-02-20T12:01:48.931401",
+      "duration": 0.016668,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:01:48.931413"
+    },
+    "-OJZIvURdTaodRhlX7I2": {
+      "bbox": [
+        0.4658660888671875,
+        80.00054931640625,
+        248.94949340820312,
+        480
+      ],
+      "class_id": 0,
+      "confidence": 0.7003841400146484,
+      "detection_time": "2025-02-20T12:02:40.314318",
+      "duration": 0.029412,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:02:40.314339"
+    },
+    "-OJZJ6mGhC-vXo_7t2BO": {
+      "bbox": [
+        338.0718994140625,
+        159.875732421875,
+        511.744384765625,
+        274.64056396484375
+      ],
+      "class_id": 0,
+      "confidence": 0.7700935006141663,
+      "detection_time": "2025-02-20T12:03:30.655462",
+      "duration": 0.037667,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:03:30.655483"
+    },
+    "-OJZJJ3uQ5o9wuBueZTT": {
+      "bbox": [
+        329.8270263671875,
+        162.92648315429688,
+        520.97412109375,
+        267.9216003417969
+      ],
+      "class_id": 0,
+      "confidence": 0.7216938734054565,
+      "detection_time": "2025-02-20T12:04:21.000976",
+      "duration": 0.016397,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:04:21.000987"
+    },
+    "-OJZJXK1iacspoJiRwxh": {
+      "bbox": [
+        375.25897216796875,
+        161.82498168945312,
+        526.4603881835938,
+        264.6998291015625
+      ],
+      "class_id": 0,
+      "confidence": 0.7064366936683655,
+      "detection_time": "2025-02-20T12:05:19.386882",
+      "duration": 0.027544,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:05:19.386894"
+    },
+    "-OJZJibF-4aYT9um2HDw": {
+      "bbox": [
+        367.36944580078125,
+        137.66961669921875,
+        520.8464965820312,
+        255.8487548828125
+      ],
+      "class_id": 0,
+      "confidence": 0.8114269375801086,
+      "detection_time": "2025-02-20T12:06:09.703181",
+      "duration": 0.028325,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:06:09.703193"
+    },
+    "-OJZJuxmIHVf3YZDXti-": {
+      "bbox": [
+        538.75341796875,
+        142.41500854492188,
+        640,
+        409.0807189941406
+      ],
+      "class_id": 0,
+      "confidence": 0.7695592045783997,
+      "detection_time": "2025-02-20T12:07:00.292590",
+      "duration": 0.033771,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:07:00.292603"
+    },
+    "-OJZK6He--qxI48DMsc4": {
+      "bbox": [
+        371.94683837890625,
+        143.3070068359375,
+        517.295166015625,
+        274.7838439941406
+      ],
+      "class_id": 0,
+      "confidence": 0.7107197046279907,
+      "detection_time": "2025-02-20T12:07:50.788398",
+      "duration": 0.037903,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:07:50.788411"
+    },
+    "-OJZKIhoGDdocsiiaMNs": {
+      "bbox": [
+        341.892578125,
+        134.07537841796875,
+        491.00836181640625,
+        296.06781005859375
+      ],
+      "class_id": 0,
+      "confidence": 0.7371441721916199,
+      "detection_time": "2025-02-20T12:08:41.669488",
+      "duration": 0.020058,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:08:41.669499"
+    },
+    "-OJZKVAt4jC1vtXsH0fO": {
+      "bbox": [
+        330.06829833984375,
+        184.58453369140625,
+        481.95697021484375,
+        260.8794860839844
+      ],
+      "class_id": 0,
+      "confidence": 0.7447033524513245,
+      "detection_time": "2025-02-20T12:09:32.753210",
+      "duration": 0.022629,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:09:32.753222"
+    },
+    "-OJZKgmPaMnqTHp-vkXP": {
+      "bbox": [
+        407.85028076171875,
+        159.57077026367188,
+        519.3311767578125,
+        259.2939758300781
+      ],
+      "class_id": 0,
+      "confidence": 0.7011973857879639,
+      "detection_time": "2025-02-20T12:10:24.354327",
+      "duration": 0.10045,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:10:24.354382"
+    },
+    "-OJZKtHTVfDuczil_VaY": {
+      "bbox": [
+        374.47308349609375,
+        161.54379272460938,
+        486.17315673828125,
+        280.2388610839844
+      ],
+      "class_id": 0,
+      "confidence": 0.7284209132194519,
+      "detection_time": "2025-02-20T12:11:15.571904",
+      "duration": 0.04704,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:11:15.571921"
+    },
+    "-OJZL4dDV3h3DDrdju9N": {
+      "bbox": [
+        363.33367919921875,
+        159.71231079101562,
+        483.63397216796875,
+        243.18490600585938
+      ],
+      "class_id": 0,
+      "confidence": 0.7045159935951233,
+      "detection_time": "2025-02-20T12:12:06.174189",
+      "duration": 0.021181,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:12:06.174203"
+    },
+    "-OJZLHH4RScRAJCdOcsJ": {
+      "bbox": [
+        428.9053955078125,
+        170.2193603515625,
+        511.89990234375,
+        253.80252075195312
+      ],
+      "class_id": 0,
+      "confidence": 0.7530792951583862,
+      "detection_time": "2025-02-20T12:12:57.955208",
+      "duration": 0.033321,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:12:57.955227"
+    },
+    "-OJZLUFHxQRduTacHAEd": {
+      "bbox": [
+        566.7438354492188,
+        136.329833984375,
+        639.9337768554688,
+        307.3394775390625
+      ],
+      "class_id": 0,
+      "confidence": 0.7025583982467651,
+      "detection_time": "2025-02-20T12:13:51.081136",
+      "duration": 0.039936,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:13:51.081155"
+    },
+    "-OJZLmDsucoV1fxvUOk_": {
+      "bbox": [
+        428.9925537109375,
+        158.78033447265625,
+        518.6569213867188,
+        255.1231689453125
+      ],
+      "class_id": 0,
+      "confidence": 0.7220669984817505,
+      "detection_time": "2025-02-20T12:15:08.505893",
+      "duration": 0.025836,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:15:08.505911"
+    },
+    "-OJZLyWoCVngStklJ_8k": {
+      "bbox": [
+        428.65838623046875,
+        167.12054443359375,
+        511.81793212890625,
+        254.20578002929688
+      ],
+      "class_id": 0,
+      "confidence": 0.8170393109321594,
+      "detection_time": "2025-02-20T12:15:59.171470",
+      "duration": 0.026859,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:15:59.171493"
+    },
+    "-OJZMHDlLQdTMS2M4R7k": {
+      "bbox": [
+        421.66326904296875,
+        156.02883911132812,
+        495.47369384765625,
+        280.17779541015625
+      ],
+      "class_id": 0,
+      "confidence": 0.7394983768463135,
+      "detection_time": "2025-02-20T12:17:19.673294",
+      "duration": 0.023901,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:17:19.673316"
+    },
+    "-OJZMYDXRjb2pDpB8wx_": {
+      "bbox": [
+        383.2452087402344,
+        159.79873657226562,
+        509.8992004394531,
+        244.34426879882812
+      ],
+      "class_id": 0,
+      "confidence": 0.7158223390579224,
+      "detection_time": "2025-02-20T12:18:29.502372",
+      "duration": 0.047774,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:18:29.502405"
+    },
+    "-OJZMlAcgabpyz5ruBKG": {
+      "bbox": [
+        520.7315673828125,
+        151.89991760253906,
+        640,
+        480
+      ],
+      "class_id": 0,
+      "confidence": 0.7356078028678894,
+      "detection_time": "2025-02-20T12:19:26.654624",
+      "duration": 0.019153,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:19:26.654636"
+    },
+    "-OJZMxh5Skhh7nlJaNZm": {
+      "bbox": [
+        511.34490966796875,
+        44.7677001953125,
+        640,
+        310.2587890625
+      ],
+      "class_id": 0,
+      "confidence": 0.7524585723876953,
+      "detection_time": "2025-02-20T12:20:17.955745",
+      "duration": 0.01805,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:20:17.955766"
+    },
+    "-OJZNBDQ9QYpSBTwxC1F": {
+      "bbox": [
+        299.30438232421875,
+        136.2679443359375,
+        448.48944091796875,
+        276.552734375
+      ],
+      "class_id": 0,
+      "confidence": 0.7013969421386719,
+      "detection_time": "2025-02-20T12:21:16.987248",
+      "duration": 0.025266,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:21:16.987260"
+    },
+    "-OJZNO-UgezQAiUguB6d": {
+      "bbox": [
+        354.5526123046875,
+        144.7493896484375,
+        443.08575439453125,
+        269.19830322265625
+      ],
+      "class_id": 0,
+      "confidence": 0.7054787278175354,
+      "detection_time": "2025-02-20T12:22:09.739839",
+      "duration": 0.022227,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:22:09.739858"
+    },
+    "-OJZN_L19hKKsat9D-th": {
+      "bbox": [
+        269.57574462890625,
+        149.50225830078125,
+        380.04437255859375,
+        257.040283203125
+      ],
+      "class_id": 0,
+      "confidence": 0.733404278755188,
+      "detection_time": "2025-02-20T12:23:00.312701",
+      "duration": 0.033078,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:23:00.312720"
+    },
+    "-OJZNnSWUfbiKhVqJhmO": {
+      "bbox": [
+        256.9132080078125,
+        138.33013916015625,
+        381.08929443359375,
+        296.7777404785156
+      ],
+      "class_id": 0,
+      "confidence": 0.7800116539001465,
+      "detection_time": "2025-02-20T12:23:58.124183",
+      "duration": 0.052279,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:23:58.124231"
+    },
+    "-OJZO-5ycEMoj4-Ye6eK": {
+      "bbox": [
+        226.01698303222656,
+        148.21209716796875,
+        365.2476806640625,
+        299.5361328125
+      ],
+      "class_id": 0,
+      "confidence": 0.795198917388916,
+      "detection_time": "2025-02-20T12:24:49.934263",
+      "duration": 0.095023,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:24:49.934326"
+    },
+    "-OJZOMdxiuvt_a7ErweK": {
+      "bbox": [
+        278.97064208984375,
+        187.91726684570312,
+        372.98956298828125,
+        296.22222900390625
+      ],
+      "class_id": 0,
+      "confidence": 0.7272630929946899,
+      "detection_time": "2025-02-20T12:26:26.177797",
+      "duration": 0.046222,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:26:26.177822"
+    },
+    "-OJZOZZnEAH8PFmmMgqf": {
+      "bbox": [
+        323.082763671875,
+        154.62738037109375,
+        402.8035888671875,
+        264.11798095703125
+      ],
+      "class_id": 0,
+      "confidence": 0.7653757929801941,
+      "detection_time": "2025-02-20T12:27:19.306376",
+      "duration": 0.028958,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:27:19.306411"
+    },
+    "-OJZOlEPzdzsf0MXFOSE": {
+      "bbox": [
+        456.49090576171875,
+        168.73974609375,
+        506.34503173828125,
+        263.6279296875
+      ],
+      "class_id": 0,
+      "confidence": 0.7908602952957153,
+      "detection_time": "2025-02-20T12:28:11.183339",
+      "duration": 0.03477,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:28:11.183370"
+    },
+    "-OJZOyhizUGiibnFPfHq": {
+      "bbox": [
+        560.1571044921875,
+        148.94210815429688,
+        640,
+        306.6029968261719
+      ],
+      "class_id": 0,
+      "confidence": 0.7531378865242004,
+      "detection_time": "2025-02-20T12:29:06.354242",
+      "duration": 0.049286,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:29:06.354271"
+    },
+    "-OJZPATLMPsnMJP05YiJ": {
+      "bbox": [
+        361.7139587402344,
+        173.73037719726562,
+        430.9954528808594,
+        261.66619873046875
+      ],
+      "class_id": 0,
+      "confidence": 0.7322657704353333,
+      "detection_time": "2025-02-20T12:29:58.638423",
+      "duration": 0.026432,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:29:58.638443"
+    },
+    "-OJZPVLBbF9YahD2xLBp": {
+      "bbox": [
+        61.23733139038086,
+        118.66778564453125,
+        176.62338256835938,
+        323.58416748046875
+      ],
+      "class_id": 0,
+      "confidence": 0.7145724892616272,
+      "detection_time": "2025-02-20T12:31:23.692770",
+      "duration": 0.023037,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:31:23.692786"
+    },
+    "-OJZPhIF2FecQuPKR7Cv": {
+      "bbox": [
+        0,
+        17.16693115234375,
+        284.9268493652344,
+        475.81317138671875
+      ],
+      "class_id": 0,
+      "confidence": 0.703596293926239,
+      "detection_time": "2025-02-20T12:32:17.194741",
+      "duration": 0.031093,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:32:17.194755"
+    },
+    "-OJZPuNrnY41csvnqmnK": {
+      "bbox": [
+        203.69683837890625,
+        191.95822143554688,
+        329.06036376953125,
+        268.444091796875
+      ],
+      "class_id": 0,
+      "confidence": 0.7035157680511475,
+      "detection_time": "2025-02-20T12:33:10.793845",
+      "duration": 0.02833,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:33:10.793872"
+    },
+    "-OJZQ6zp6IFrKZFekDeZ": {
+      "bbox": [
+        257.34222412109375,
+        216.78140258789062,
+        337.24212646484375,
+        284.325927734375
+      ],
+      "class_id": 0,
+      "confidence": 0.7044458389282227,
+      "detection_time": "2025-02-20T12:34:06.516259",
+      "duration": 0.036275,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:34:06.516280"
+    },
+    "-OJZQUxQiPvW6Igwa4LH": {
+      "bbox": [
+        260.63299560546875,
+        204.18280029296875,
+        351.37823486328125,
+        260.0114440917969
+      ],
+      "class_id": 0,
+      "confidence": 0.8385351300239563,
+      "detection_time": "2025-02-20T12:35:44.431308",
+      "duration": 0.043679,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:35:44.431340"
+    },
+    "-OJZQg_14a7t1EccwomM": {
+      "bbox": [
+        206.9606475830078,
+        188.90322875976562,
+        330.88946533203125,
+        275.15240478515625
+      ],
+      "class_id": 0,
+      "confidence": 0.7122801542282104,
+      "detection_time": "2025-02-20T12:36:36.373986",
+      "duration": 0.042191,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:36:36.374006"
+    },
+    "-OJZR0G2tKx2BNb5SwRG": {
+      "bbox": [
+        340.7372741699219,
+        141.89852905273438,
+        463.5970764160156,
+        256.95416259765625
+      ],
+      "class_id": 0,
+      "confidence": 0.7203615307807922,
+      "detection_time": "2025-02-20T12:38:00.117404",
+      "duration": 0.052718,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:38:00.117432"
+    },
+    "-OJZRHISjvm93KuKwuLB": {
+      "bbox": [
+        108.63211059570312,
+        129.10015869140625,
+        339.80743408203125,
+        298.7289123535156
+      ],
+      "class_id": 0,
+      "confidence": 0.7994288206100464,
+      "detection_time": "2025-02-20T12:39:10.882159",
+      "duration": 0.021824,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:39:10.882189"
+    },
+    "-OJZRaDu87bIr7T0oVuq": {
+      "bbox": [
+        222.32266235351562,
+        203.43328857421875,
+        325.4970397949219,
+        259.079833984375
+      ],
+      "class_id": 0,
+      "confidence": 0.7467979192733765,
+      "detection_time": "2025-02-20T12:40:31.610052",
+      "duration": 0.051429,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:40:31.610075"
+    },
+    "-OJZRntF8w-2cZJgEbmQ": {
+      "bbox": [
+        124.75,
+        213.10604858398438,
+        352.2125549316406,
+        258.7025451660156
+      ],
+      "class_id": 0,
+      "confidence": 0.7012742161750793,
+      "detection_time": "2025-02-20T12:41:28.478983",
+      "duration": 0.043402,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:41:28.479001"
+    },
+    "-OJZS-DOmRZj4YOrGFFx": {
+      "bbox": [
+        222.19544982910156,
+        218.38601684570312,
+        348.3939208984375,
+        258.67742919921875
+      ],
+      "class_id": 0,
+      "confidence": 0.7372347712516785,
+      "detection_time": "2025-02-20T12:42:18.987391",
+      "duration": 0.038151,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:42:18.987416"
+    },
+    "-OJZSDsOX6j0na_9Qtri": {
+      "bbox": [
+        198.75668334960938,
+        213.02484130859375,
+        366.5082702636719,
+        256.98291015625
+      ],
+      "class_id": 0,
+      "confidence": 0.7081019878387451,
+      "detection_time": "2025-02-20T12:43:19.027935",
+      "duration": 0.03156,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:43:19.027963"
+    },
+    "-OJZSQI-F8hzNI8bTagH": {
+      "bbox": [
+        254.29849243164062,
+        220.14596557617188,
+        364.1869812011719,
+        270.5080871582031
+      ],
+      "class_id": 0,
+      "confidence": 0.7459020614624023,
+      "detection_time": "2025-02-20T12:44:09.866685",
+      "duration": 0.028995,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:44:09.866701"
+    },
+    "-OJZSfwwTd42uLyeN_8B": {
+      "bbox": [
+        361.2339782714844,
+        142.28903198242188,
+        425.8203430175781,
+        259.5450439453125
+      ],
+      "class_id": 0,
+      "confidence": 0.7249254584312439,
+      "detection_time": "2025-02-20T12:45:18.098836",
+      "duration": 0.040588,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:45:18.098862"
+    },
+    "-OJZStIRIp-vr_d7lk8I": {
+      "bbox": [
+        318.53143310546875,
+        193.75799560546875,
+        399.97906494140625,
+        267.11749267578125
+      ],
+      "class_id": 0,
+      "confidence": 0.7387667298316956,
+      "detection_time": "2025-02-20T12:46:12.784205",
+      "duration": 0.0218,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:46:12.784218"
+    },
+    "-OJZT4xBeyRgJabZBttT": {
+      "bbox": [
+        325.9307861328125,
+        189.65798950195312,
+        417.45953369140625,
+        260.2715759277344
+      ],
+      "class_id": 0,
+      "confidence": 0.7097631692886353,
+      "detection_time": "2025-02-20T12:47:04.584898",
+      "duration": 0.064519,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:47:04.584914"
+    },
+    "-OJZTKfBsOikHyI-K_4P": {
+      "bbox": [
+        300.8658447265625,
+        182.2333984375,
+        394.126708984375,
+        264.06451416015625
+      ],
+      "class_id": 0,
+      "confidence": 0.7009463906288147,
+      "detection_time": "2025-02-20T12:48:08.984506",
+      "duration": 0.02681,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:48:08.984522"
+    },
+    "-OJZTX8yIJlLOHwh7ZVN": {
+      "bbox": [
+        1.0589752197265625,
+        124.82485961914062,
+        101.65293884277344,
+        299.5138244628906
+      ],
+      "class_id": 0,
+      "confidence": 0.8234567046165466,
+      "detection_time": "2025-02-20T12:49:00.096576",
+      "duration": 0.044385,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:49:00.096598"
+    },
+    "-OJZTiREzARQPZ97TMf2": {
+      "bbox": [
+        577.8980102539062,
+        178.63690185546875,
+        639.8533325195312,
+        383.02044677734375
+      ],
+      "class_id": 0,
+      "confidence": 0.8290089964866638,
+      "detection_time": "2025-02-20T12:49:50.433153",
+      "duration": 0.042429,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:49:50.433189"
+    },
+    "-OJZTvqhT3Knf2-9wHJA": {
+      "bbox": [
+        179.9615020751953,
+        115.33111572265625,
+        356.80548095703125,
+        344.8077087402344
+      ],
+      "class_id": 0,
+      "confidence": 0.7356260418891907,
+      "detection_time": "2025-02-20T12:50:45.382088",
+      "duration": 0.018638,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:50:45.382100"
+    },
+    "-OJZU7EyIZKbpOEpf_BT": {
+      "bbox": [
+        0.93212890625,
+        136.50157165527344,
+        147.28448486328125,
+        479.89990234375
+      ],
+      "class_id": 0,
+      "confidence": 0.7824369072914124,
+      "detection_time": "2025-02-20T12:51:36.145062",
+      "duration": 0.052629,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:51:36.145088"
+    },
+    "-OJZUL7wlV19NgR6llpi": {
+      "bbox": [
+        452.7470397949219,
+        118.34756469726562,
+        639.121826171875,
+        320.1939697265625
+      ],
+      "class_id": 0,
+      "confidence": 0.7365248799324036,
+      "detection_time": "2025-02-20T12:52:33.007848",
+      "duration": 0.017863,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:52:33.007858"
+    },
+    "-OJZUYnfRviHRx8wq9AF": {
+      "bbox": [
+        0.06188201904296875,
+        103.85285186767578,
+        49.01482391357422,
+        283.67913818359375
+      ],
+      "class_id": 0,
+      "confidence": 0.7221590876579285,
+      "detection_time": "2025-02-20T12:53:28.992226",
+      "duration": 0.020085,
+      "location": "Área de monitoreo 1",
+      "status": "pending",
+      "timestamp": "2025-02-20T12:53:28.992239"
+    }
+  }
+}
