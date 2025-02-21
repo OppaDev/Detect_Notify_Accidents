@@ -1,12 +1,13 @@
 # app/services/yolo_service.py
+
 from ultralytics import YOLO
 import os
 import logging
-from typing import List, Dict
+from typing import List, Dict, Any
 from datetime import datetime
 from app.core.config import settings
-from app.services.firebase_service import FirebaseService  # Importa el servicio Firebase
-from typing import List, Dict, Any
+from app.services.firebase_service import FirebaseService
+
 class YoloService:
     _instance = None
 
@@ -25,6 +26,7 @@ class YoloService:
         self.last_notification_time = None
         self.firebase_service = FirebaseService()  # Obtener la instancia de FirebaseService
         self._initialized = True
+
     async def initialize(self, model_path: str = "best.pt"):
         """Inicializa el modelo YOLO"""
         if not self.initialized:
@@ -55,6 +57,9 @@ class YoloService:
         """
         Realiza la detección y encola una notificación si es necesario
         """
+        # Capturar el tiempo de inicio
+        start_time = datetime.now()
+
         results = await self.detect(frame)
         boxes = self.get_boxes(results)
 
@@ -63,11 +68,19 @@ class YoloService:
             class_id = box['class']
 
             if class_id == 0 and confidence > settings.DETECTION_THRESHOLD and await self.should_send_notification():
+                # Obtener el tiempo de detección
+                detection_time = datetime.now()
+
+                # Calcular la duración de la detección
+                duration = (detection_time - start_time).total_seconds()
+
                 detection_data = {
                     'confidence': float(confidence),
                     'class_id': int(class_id),
                     'bbox': box['bbox'],
                     'location': 'Área de monitoreo 1',
+                    'detection_time': detection_time.isoformat(),  # Añadir el tiempo de detección
+                    'duration': duration  # Añadir la duración
                 }
                 await self.process_detection(detection_data)
 

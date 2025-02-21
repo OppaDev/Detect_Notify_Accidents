@@ -39,7 +39,7 @@ class Settings(BaseSettings):
     FIREBASE_DATABASE_URL: str = "https://fallapp-6d506-default-rtdb.firebaseio.com"
     
     # Configuración de detección
-    DETECTION_THRESHOLD: float = 0.9  # Umbral de confianza para notificaciones
+    DETECTION_THRESHOLD: float = 0.7  # Umbral de confianza para notificaciones
     NOTIFICATION_COOLDOWN: int = 50  # Segundos entre notificaciones
 
 
